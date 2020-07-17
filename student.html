@@ -1,0 +1,108 @@
+
+<html><head>
+        <title></title>
+    </head>
+    <body>
+		<script>
+function calculate() {
+    marks_objects = document.getElementsByClassName("marks");
+	total_objects = document.getElementsByClassName("total");
+	percentage_objects = document.getElementsByClassName("percentage");
+	result_objects = document.getElementsByClassName("result");
+	i = 0;
+	for (j=0;j<5;j++)
+	{
+		start = i;
+		end = (i + 5);
+		total = 0.0;
+		for(i=start;i<end;i++){
+			temp = marks_objects[i].value
+			total = +total + +marks_objects[i].value;
+			}
+		total_objects[j].setAttribute('value',total);
+		
+		percentage = ((100 * total)/500)
+		percentage_objects[j].setAttribute('value', percentage + "%");
+		
+		if (percentage >= 0 && percentage < 50)
+			result_objects[j].setAttribute('value', "Fail")
+		else if (percentage > 50 && percentage <=60)
+			result_objects[j].setAttribute('value', "Pass")
+		else if (percentage > 60 && percentage <=70)
+			result_objects[j].setAttribute('value', "First Class")
+		else if (percentage > 70 && percentage <=100)
+			result_objects[j].setAttribute('value', "Distinction")
+		else
+			result_objects[j].setAttribute('value', "Invalid Input")
+	}	
+}
+</script>
+
+        <table cellspacing="2px" cellpadding="2">
+            <tbody><tr>
+                <th>Enter Student Name:</th>
+                <th>Subject 1:</th>
+                <th>Subject 2:</th>
+                <th>Subject 3:</th>
+                <th>Subject 4:</th>
+                <th>Subject 5:</th>
+                <th>Total</th>
+                <th>Percentage</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td><input type="text" value="" id="student_name"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="total"></td>
+                <td><input type="text" value="" class="percentage"></td>
+                <td><input type="text" value="" class="result"></td>
+            </tr><tr>
+                <td><input type="text" value="" id="student_name"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="total"></td>
+                <td><input type="text" value="" class="percentage"></td>
+                <td><input type="text" value="" class="result"></td>
+            </tr><tr>
+                <td><input type="text" value="" id="student_name"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="total"></td>
+                <td><input type="text" value="" class="percentage"></td>
+                <td><input type="text" value="" class="result"></td>
+            </tr><tr>
+                <td><input type="text" value="" id="student_name"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="total"></td>
+                <td><input type="text" value="" class="percentage"></td>
+                <td><input type="text" value="" class="result"></td>
+            </tr><tr>
+                <td><input type="text" value="" id="student_name"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="marks"></td>
+                <td><input type="text" value="" class="total"></td>
+                <td><input type="text" value="" class="percentage"></td>
+                <td><input type="text" value="" class="result"></td>
+            
+            </tr>
+        </tbody></table>
+    <center><input type="button" id="calculate" value="calculate" onclick="calculate()" style="height:50;width:100;"></center>
+	
+</body></html>
